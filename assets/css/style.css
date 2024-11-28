@@ -1,0 +1,339 @@
+html,
+body,
+div,
+span,
+applet,
+object,
+iframe,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+p,
+blockquote,
+pre,
+a,
+abbr,
+acronym,
+address,
+big,
+cite,
+code,
+del,
+dfn,
+em,
+img,
+ins,
+kbd,
+q,
+s,
+samp,
+small,
+strike,
+strong,
+sub,
+sup,
+tt,
+var,
+b,
+u,
+i,
+center,
+dl,
+dt,
+dd,
+ol,
+ul,
+li,
+fieldset,
+form,
+label,
+legend,
+table,
+caption,
+tbody,
+tfoot,
+thead,
+tr,
+th,
+td,
+article,
+aside,
+canvas,
+details,
+embed,
+figure,
+figcaption,
+footer,
+header,
+hgroup,
+menu,
+nav,
+output,
+ruby,
+section,
+summary,
+time,
+mark,
+audio,
+video {
+  margin: 0;
+  padding: 0;
+  border: 0;
+  font-size: 100%;
+  font: inherit;
+  vertical-align: baseline;
+  vertical-align: baseline;
+  box-sizing: border-box;
+  font-family: "Montserrat", serif;
+}
+
+/* HTML5 display-role reset for older browsers */
+article,
+aside,
+details,
+figcaption,
+figure,
+footer,
+header,
+hgroup,
+menu,
+nav,
+section {
+  display: block;
+}
+
+body {
+  line-height: 1;
+}
+
+ol,
+ul {
+  list-style: none;
+}
+
+blockquote,
+q {
+  quotes: none;
+}
+
+blockquote:before,
+blockquote:after,
+q:before,
+q:after {
+  content: '';
+  content: none;
+}
+
+table {
+  border-collapse: collapse;
+  border-spacing: 0;
+}
+
+html,
+body {
+  background-color: #f7f7fe;
+}
+
+body {
+  line-height: 1;
+}
+
+ol,
+ul {
+  list-style: none;
+}
+
+blockquote,
+q {
+  quotes: none;
+
+  &::before,
+  &::after {
+    content: '';
+  }
+}
+
+table {
+  border-collapse: collapse;
+  border-spacing: 0;
+}
+
+.container {
+
+  h1 {
+    font-size: 32px;
+    font-weight: 700;
+    line-height: 39.01px;
+    text-align: center;
+    color: #6E728E;
+    margin-bottom: 40px;
+  }
+}
+
+.switch {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 24px;
+  margin-bottom: 80px;
+
+  p {
+    font-size: 15px;
+    font-weight: 700;
+    line-height: 28px;
+    color: #b3b5c6;
+  }
+
+  .input-change {
+    height: 32px;
+    width: 56px;
+    border-radius: 16px;
+    padding: 4px;
+    cursor: pointer;
+    background: linear-gradient(135deg, #A2A7F0 0%, #696EDD 100%);
+
+  }
+}
+
+
+.packages {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 32px;
+
+  .package {
+    padding: 31px 29px;
+    background-color: #FFFFFF;
+    border-radius: 10px;
+    box-shadow: 0px 20px 40px 0px #D4D2F480;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 100%;
+
+    p {
+      padding-block: 12px;
+      border-bottom: 1px solid #dbdce3;
+      font-size: 15px;
+      font-weight: 700;
+      line-height: 28px;
+      color: #6E728E;
+      text-align: center;
+    }
+
+    .type {
+      font-size: 18px;
+      font-weight: 700;
+      line-height: 28px;
+      color: #6E728E;
+      margin-bottom: 24px;
+    }
+
+    .price-info {
+      display: flex;
+      align-items: center;
+      gap: 7px;
+      padding-bottom: 32px;
+      border-bottom: 1px solid #dbdce3;
+
+      .price {
+        font-size: 72px;
+        font-weight: 700;
+        line-height: 71px;
+        color: #6E728E;
+      }
+
+      span {
+        font-size: 40px;
+        font-weight: 700;
+        color: #6E728E;
+      }
+    }
+
+    button {
+      margin-top: 32px;
+      width: 100%;
+      color: #FFFFFF;
+      font-size: 13px;
+      font-weight: 700;
+      line-height: 15.85px;
+      padding: 14px;
+      background: linear-gradient(135deg, #A2A7F0 0%, #696EDD 100%);
+      border-radius: 6px;
+      border: 1px solid transparent;
+      cursor: pointer;
+    }
+
+    &.pro {
+      background: linear-gradient(135deg, #A2A7F0 0.06%, #696EDD 100.06%);
+
+      p,
+      span {
+        color: #FFFFFF;
+        border-color: #aeb2f0;
+      }
+
+      .price-info {
+        color: #FFFFFF;
+
+        .price {
+          color: #FFFFFF;
+        }
+      }
+
+      button {
+        color: #6D72DE;
+        background: #FFFFFF;
+      }
+    }
+  }
+}
+
+@media only screen and (min-width: 380px) {
+
+
+  .container {
+    padding: 71px 0px 100px;
+  }
+
+  .switch {
+    margin-bottom: 64px;
+  }
+
+  .packages {
+    flex-direction: row;
+    gap: 0;
+
+    .package {
+      width: 350px;
+
+      &.basic {
+        border-radius: 10px 0 0 10px;
+      }
+
+      &.master {
+        border-radius: 0 10px 10px 0;
+      }
+
+      &.pro {
+        padding: 55px 31px;
+      }
+
+      button:hover {
+        background: transparent;
+        border: 1px solid #6D72DE;
+        color: #6D72DE;
+      }
+
+      &.pro button:hover {
+        border: 1px solid #FFFFFF;
+        color: #FFFFFF;
+      }
+    }
+  }
+}
